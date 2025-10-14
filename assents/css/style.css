@@ -2,11 +2,25 @@
 :root{
 --fonteh1: "Pacifico", cursive;
 --fontep: "Satisfy", cursive;
---cor_texto: rgb(231, 218, 218);
---cor_fundo: rgb(69, 54, 37);
---backgroundcolor: rgb(209, 175, 142);
+--cor_texto: #ffffff;
+--cor_texto2: #633720;
+--cor_fundo: #45744c;
+--backgroundcolor: #5A3F30;
 --cor_hover: rgb(172, 170, 114)
   
+}
+.destaques {
+  display: flex; /* Transforma este div em um contêiner flexível */
+  justify-content: space-between; /* Distribui os cards com espaço entre eles */
+  gap: 16px; /* Adiciona um espaço entre os cards */
+  flex-wrap: wrap;
+}
+.cards{
+    flex: 1;
+  background-color: lightgray;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 200px
 }
 *{
     text-align: center;
@@ -37,4 +51,7 @@ hr{
     background-color: var(--cor_fundo);
     height: 3px;
     border: none;
+}
+h2{
+    color: var(--cor_fundo);
 }
