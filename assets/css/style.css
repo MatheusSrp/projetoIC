@@ -24,7 +24,8 @@
 }
 *{
     text-align: center;
-    color: var(--cor_texto);
+    color: #ffffff;
+    padding: auto;
 }
 h1{
     font-family: var(--fonteh1);
@@ -53,6 +54,10 @@ hr{
 }
 h2{
     color: var(--cor_fundo);
+}
+h3{
+    color: var(--cor_texto);
+    font-size: 30px;
 }
 .hero {
     position: relative;  /* Permite posicionar elementos sobre a imagem */
@@ -107,4 +112,13 @@ h2{
 .cta-button:hover {
     background-color: darken(var(--cor_hover), 10%);  /* Escurece a cor no hover; use uma cor específica se não suportar */
     background-color: #8a795d;  /* Alternativa se precisar de um valor fixo */
+}
+footer{
+    background-color: var(--cor_fundo);
+    padding: 15px;
+}
+@media (max-width: 768px) {
+    .footer-links {
+        flex-direction: column;  /* Empilha os links em telas menores */
+    }
 }
