@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafeteria Cesar</title>
-    <link rel="stylesheet" href="assents/css/style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     
 </head>
 <body>
     <header style="background-color: var(--cor_fundo);">
     <div style="display: flex; justify-content:space-around; align-items: center ;">
     <h1>A Cafeteria.</h1>
-    <img style="width: 200px;" src="./assents/img/icon_cafeteria.png" alt=""> <!--Só placeholder-->
+    <img style="width: 200px;" src="./assets/img/icon_cafeteria.png" alt=""> <!--Só placeholder-->
     <p>A melhor do Brasil</p>
     </div>
     <div style= "padding: 20px; ">
@@ -19,15 +19,35 @@
     <a href="contato.html">Contatos</a>
     </div>
 </header>
-<main>
+<main style="font-family: var(--fontep);">
+
+    <div class="hero">
+        <div class="hero-content">
+            <h2>Bem-vindo à Cafeteria Cesar</h2>  <!-- Título conciso -->
+            <p>Descubra o melhor café brasileiro, com sabores autênticos e uma atmosfera acolhedora. Venha experimentar e transforme seu dia!</p>  <!-- Texto persuasivo -->
+            <a href="menu.html" class="cta-button">Veja Nosso Menu</a>  <!-- CTA: Link para outra página -->
+        </div>
+        <!-- Imagem de fundo ou inline -->
+        <img src="assets/img/hero-image.jpg" alt="Café fresco e delicioso" class="hero-image">  <!-- Substitua pelo seu caminho de imagem -->
+    </div>
+
     <div style=" padding: 20px;">
         <h2>Aqui você vai achar?</h2>
         <p style="color: var(--cor_texto2);" class="cards">o melhor do do café brasileiro</p>
     </div>
     <div class="destaques">
-    <div class="card">Destaque 1</div>
-    <div class="card">Destaque 2</div>
-    <div class="card">Destaque 3</div>
+    <div class="card">Ótima Localização
+        <hr>
+        <img src="./assets/img/img_cafeteria.png" alt="Imagem da Cafeteria">
+    </div>
+    <div class="card">Café de Qualidade
+        <hr>
+        <img src="./assets/img/img_cafe.png" alt="Imagem de Café">
+    </div>
+    <div class="card">Ótima Atendimento
+        <hr>
+        <img src="./assets/img/img_atendente.png" alt="Imagem de Atendente">
+    </div>
     </div>
 </main>
 

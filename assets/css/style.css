@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
+:root{
+--fonteh1: "Pacifico", cursive;
+--fontep: "Satisfy", cursive;
+--cor_texto: #ffffff;
+--cor_texto2: #633720;
+--cor_fundo: #45744c;
+--backgroundcolor: #5A3F30;
+--cor_hover: rgb(172, 170, 114)
+  
+}
+.destaques {
+  display: flex;
+  justify-content: space-between; 
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.card{
+    flex: 1;
+  background-color: var(--cor_fundo);
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 200px
+}
+*{
+    text-align: center;
+    color: var(--cor_texto);
+}
+h1{
+    font-family: var(--fonteh1);
+    font-weight: 400;
+    font-style: normal;
+}
+p{
+    font-family: var(--fontep);
+    font-weight: 400;
+    font-style: normal; 
+    font-size: 20px;
+}
+a{
+    font-family: var(--fontep);
+    padding: 20px;
+    font-size: 25px;
+}
+a:hover{
+    transition: color 0.5s ease;
+    color: var(--cor_hover);
+}
+hr{
+    background-color: var(--cor_fundo);
+    height: 3px;
+    border: none;
+}
+h2{
+    color: var(--cor_fundo);
+}
+.hero {
+    position: relative;  /* Permite posicionar elementos sobre a imagem */
+    height: 400px;  /* Altura da seção; ajuste conforme necessário */
+    background-color: var(--cor_fundo);  /* Usa sua cor de fundo para um fundo padrão */
+    overflow: hidden;  /* Evita que elementos saiam da área */
+    display: flex;  /* Usa flexbox para alinhar o conteúdo */
+    align-items: center;  /* Centraliza verticalmente */
+    justify-content: center;  /* Centraliza horizontalmente */
+    color: var(--cor_texto);  /* Texto branco para contraste */
+}
+
+.hero-image {
+    position: absolute;  /* Coloca a imagem no fundo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ajusta a imagem para cobrir a área sem distorcer */
+    z-index: 1;  /* Garante que a imagem fique atrás do conteúdo */
+}
+
+.hero-content {
+    position: relative;  /* Coloca o conteúdo sobre a imagem */
+    z-index: 2;  /* Garante que o conteúdo fique na frente */
+    text-align: center;  /* Centraliza o texto */
+    padding: 20px;  /* Espaço ao redor */
+    background-color: rgba(0, 0, 0, 0.5);  /* Overlay semi-transparente para melhor legibilidade, opcional */
+    border-radius: 8px;  /* Bordas arredondadas */
+}
+
+.hero-content h2 {
+    font-size: 2.5em;  /* Título grande e impactante */
+    margin-bottom: 10px;  /* Espaço abaixo do título */
+}
+
+.hero-content p {
+    font-size: 1.2em;  /* Texto persuasivo legível */
+    margin-bottom: 20px;  /* Espaço antes da CTA */
+}
+
+.cta-button {
+    display: inline-block;  /* Faz o botão se comportar como um bloco inline */
+    padding: 10px 20px;  /* Espaço interno */
+    background-color: var(--cor_hover);  /* Usa sua cor de hover para o botão */
+    color: var(--cor_texto);  /* Texto branco */
+    text-decoration: none;  /* Remove sublinhado */
+    border-radius: 5px;  /* Bordas arredondadas */
+    transition: background-color 0.3s ease;  /* Animação no hover */
+}
+
+.cta-button:hover {
+    background-color: darken(var(--cor_hover), 10%);  /* Escurece a cor no hover; use uma cor específica se não suportar */
+    background-color: #8a795d;  /* Alternativa se precisar de um valor fixo */
+}
