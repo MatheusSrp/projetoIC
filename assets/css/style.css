@@ -1,12 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Doodle+Shadow&display=swap');
 :root{
+--fonteh1: "Rubik Doodle Shadow", system-ui;
+--fontep: "Rubik Doodle Shadow", system-ui; 
 --fonteh1: "Pacifico", cursive;
 --fontep: "Satisfy", cursive;
---cor_texto: #ffffff;
+--cor_texto: #45744c;
 --cor_texto2: #633720;
 --cor_fundo: #45744c;
 --backgroundcolor: #5A3F30;
---cor_hover: rgb(172, 170, 114)
+--cor_hover: rgb(172, 170, 114);
+--cor_branco: #ffffff;
   
 }
 .destaques {
@@ -20,33 +26,49 @@
   background-color: var(--cor_fundo);
   padding: 20px;
   border-radius: 8px;
-  min-width: 200px
+  min-width: 200px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-*{
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
     text-align: center;
-    color: #ffffff;
-    padding: auto;
 }
+
 h1{
     font-family: var(--fonteh1);
     font-weight: 400;
     font-style: normal;
+    color: var(--cor_texto);
 }
 p{
     font-family: var(--fontep);
     font-weight: 400;
     font-style: normal; 
     font-size: 20px;
+    color: var(--cor_texto);
 }
 a{
     font-family: var(--fontep);
     padding: 20px;
     font-size: 25px;
+    color: var(--cor_texto);
 }
 a:hover{
     transition: color 0.5s ease;
     color: var(--cor_hover);
 }
+a:focus {
+  outline: 2px dashed var(--cor_hover);
+  outline-offset: 4px;
+}
+
 hr{
     background-color: var(--cor_fundo);
     height: 3px;
@@ -56,7 +78,7 @@ h2{
     color: var(--cor_fundo);
 }
 h3{
-    color: var(--cor_texto);
+    color: var(--cor_branco);
     font-size: 30px;
 }
 .hero {
@@ -114,11 +136,188 @@ h3{
     background-color: #8a795d;  /* Alternativa se precisar de um valor fixo */
 }
 footer{
-    background-color: var(--cor_fundo);
-    padding: 15px;
+    background-color: var(--cor_branco);
+    padding: 20px;
 }
 @media (max-width: 768px) {
     .footer-links {
         flex-direction: column;  /* Empilha os links em telas menores */
     }
+}
+
+table {
+    text-align: center;
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: var(--cor_fundo);  /* Adicionado para combinar com seu tema */
+}
+th, td {
+
+    border: 4px solid var(--cor_texto2);  /* Usando sua cor de texto secundário */
+    padding: 10px;
+    text-align: center;
+    color: var(--cor_texto);  /* Texto branco para contraste */
+}
+th {
+    text-align: center;
+    background-color: var(--cor_fundo);  /* Usando sua variável */
+    color: var(--cor_texto);
+}
+tr:nth-child(even) {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);  /* Linhas alternadas, ajustado para seu tema escuro */
+}
+.price {
+    text-align: center;
+    color: var(--cor_hover);  /* Usando sua cor de hover para destacar preços */
+}
+/* Definições de variáveis para manter a consistência com o site */
+:root {
+    --cor_fundo: #3d8361; /* Exemplo: um bege claro, como um tom de café claro */
+    --fontep: 'Arial, sans-serif'; /* Ou qualquer fonte que você definiu, como uma serifada para tema café */
+    --cor_texto: #333333; /* Cor de texto escura para legibilidade */
+    --cor_primaria: #6f4e37; /* Marrom escuro para botões e acentos */
+    --cor_secundaria: #f0e7db; /* Verde para botões ou destaques, representando sustentabilidade */
+    --cor_fundo_hero: #abec9452; /* Cinza claro para o hero, mas pode ser ajustado */
+}
+
+body {
+    margin: 0;
+    font-family: var(--fontep);
+    background-color: var(--cor_fundo); /* Fundo geral do site */
+    color: var(--cor_texto);
+}
+
+main {
+    padding: 20px;
+    max-width: 1200px; /* Limita a largura para melhor leitura */
+    margin: 0 auto; /* Centraliza o conteúdo */
+}
+
+h1 {
+    color: var(--cor_primaria); /* Cor destacada para títulos */
+    font-size: 2.5em; /* Tamanho maior para headings */
+    margin-bottom: 20px;
+    text-align: center; /* Centraliza o título */
+}
+
+p {
+    line-height: 1.6; /* Melhora a legibilidade */
+    margin-bottom: 15px;
+    font-size: 1.1em; /* Tamanho de fonte confortável */
+}
+
+iframe {
+    width: 100%; /* Faz o mapa responsivo */
+    max-width: 600px; /* Limita o tamanho máximo */
+    height: 450px;
+    border: 0;
+    border-radius: 8px; /* Bordas arredondadas para um look moderno */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    margin: 20px auto; /* Centraliza e adiciona margem */
+    display: block; /* Garante que fique centralizado */
+}
+
+/* Estilo para a seção hero */
+.hero {
+    background-color: var(--cor_fundo_hero); /* Usa a variável para consistência */
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 10px; /* Bordas arredondadas */
+}
+
+.hero h3 {
+    color: var(--cor_primaria);
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: black;
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    background-color: var(--cor_fundo); /* Cor verde para botões */
+    color: white; /* Texto branco para contraste */
+    padding: 10px 20px;
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 5px;
+    transition: background-color 0.3s; /* Animação hover */
+}
+
+.cta-button:hover {
+    background-color: darken(var(--cor_texto2), 10%); /* Escurece ao hover - use um pré-processador ou ajuste manualmente */
+    /* Se não usar pré-processador, substitua por: background-color: #2f6a4a; */
+}
+
+/* Estilo para o footer */
+footer {
+    background-color: var(--cor_primaria); /* Fundo escuro para o rodapé */
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos gerais para responsividade */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+    
+    iframe {
+        height: 300px; /* Reduz o tamanho do mapa em telas menores */
+    }
+    
+    .cta-button {
+        display: block; /* Botões em bloco para mobile */
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+:root {
+    --cor_fundo: #f0e7db; /* Bege claro, tema café */
+    --fontep: 'Arial, sans-serif'; /* Fonte padrão */
+    --cor_texto: #333333; /* Cinza escuro para textos */
+    --cor_primaria: #6f4e37; /* Marrom escuro para acentos */
+    --cor_secundaria: #3d8361; /* Verde para botões */
+    --cor_fundo_hero: #f4f4f4; /* Cinza claro para seções hero */
+}
+body {
+    margin: 0;
+    font-family: var(--fontep);
+    background-color: var(--cor_secundaria);
+    color: var(--cor_texto);
+}
+header {
+    background-color: var(--cor_secundaria);
+    padding: 20px;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 20px;
+    background-color: var(--cor_secundaria);
 }
